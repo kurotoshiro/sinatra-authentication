@@ -106,7 +106,7 @@ module Sinatra
           if Rack.const_defined?('Flash')
             flash[:error] = "There were some problems creating your account: #{@user.errors}."
           end
-          redirect '/signup?' + hash_to_query_string(params['user'])
+          redirect '/signup?' # + hash_to_query_string(params['user']) # SECURITY FLAW !
         end
       end
 

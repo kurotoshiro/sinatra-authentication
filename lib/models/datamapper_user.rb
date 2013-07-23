@@ -6,7 +6,8 @@ class DmUser
   property :hashed_password, String
   property :salt, String
   #Was DateTime should be DateTime?
-  property :created_at, Time
+  # It should, I think, maybe
+  property :created_at, DateTime
   property :permission_level, Integer, :default => 1
   if Sinatra.const_defined?('FacebookObject')
     property :fb_uid, String
