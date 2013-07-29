@@ -2,7 +2,7 @@ class DmUser
   include DataMapper::Resource
 
   property :id, Serial
-  property :email, String, :length => (5..40), :unique => true, :format => :email_address
+  property :email, String, :length => (3..40), :unique => true
   property :hashed_password, String
   property :salt, String
   #Was DateTime should be DateTime?
